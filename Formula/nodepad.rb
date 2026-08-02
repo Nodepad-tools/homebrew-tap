@@ -5,13 +5,13 @@
 class Nodepad < Formula
   desc "Nodepad — capture, resume, and bind from the terminal"
   homepage "https://inventlist.com/tools/nodepad"
-  version "0.54.1"
+  version "0.54.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/inventlist/cli-releases/releases/download/v0.54.1/inventlist_Darwin_x86_64.tar.gz"
-      sha256 "e15647f557fd25931038e1fda9e2b4e1ceeb480bdb69cb14b54bc350b78db0fd"
+      url "https://github.com/inventlist/cli-releases/releases/download/v0.54.2/inventlist_Darwin_x86_64.tar.gz"
+      sha256 "4387ac43c6e8b7c6342e5e7de93caf2c1d15566d4396d7d654fb04f3a76e58bc"
 
       define_method(:install) do
         # Installed AS `np`, not as a symlink beside another product's binary:
@@ -21,8 +21,8 @@ class Nodepad < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/inventlist/cli-releases/releases/download/v0.54.1/inventlist_Darwin_arm64.tar.gz"
-      sha256 "fbd717e1fceda073f1e346e647ca62b1c27ecbb2d226bf7cca3fa2b47201af86"
+      url "https://github.com/inventlist/cli-releases/releases/download/v0.54.2/inventlist_Darwin_arm64.tar.gz"
+      sha256 "176bd062f02e96e2661223938543454578e4c177551370efa360d73179741fe1"
 
       define_method(:install) do
         # Installed AS `np`, not as a symlink beside another product's binary:
@@ -35,8 +35,8 @@ class Nodepad < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/inventlist/cli-releases/releases/download/v0.54.1/inventlist_Linux_x86_64.tar.gz"
-      sha256 "e1fbd192ef960dd34198f1820674fb30415c603b6870bb724e95456310177882"
+      url "https://github.com/inventlist/cli-releases/releases/download/v0.54.2/inventlist_Linux_x86_64.tar.gz"
+      sha256 "8a5fa1a005f109e0047e9ce62c2541118e8dbb91dc5a6dc76e8836ccd5b864f2"
       define_method(:install) do
         # Installed AS `np`, not as a symlink beside another product's binary:
         # the flavor is chosen by argv[0], so the name IS the install.
@@ -45,8 +45,8 @@ class Nodepad < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/inventlist/cli-releases/releases/download/v0.54.1/inventlist_Linux_arm64.tar.gz"
-      sha256 "ee084b2fa6acaf797a529d50fc452e26de485c4c823ecec076c1a7804ffc4fbf"
+      url "https://github.com/inventlist/cli-releases/releases/download/v0.54.2/inventlist_Linux_arm64.tar.gz"
+      sha256 "2ccf2b2647721a7c86bb21d31720dcdd5b342558c60f134afc72c686602ea04f"
       define_method(:install) do
         # Installed AS `np`, not as a symlink beside another product's binary:
         # the flavor is chosen by argv[0], so the name IS the install.
